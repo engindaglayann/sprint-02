@@ -7,3 +7,4 @@ Bu proje, etkinliklerin yönetildiği ve görüntülendiği responsive bir web a
 ## Özellikler
 - Mobil öncelikli (Mobile First) yaklaşım.
 - Form doğrulama ve dinamik CSS değişkenleri.
+- site linki https://sprint-0222.vercel.app/
