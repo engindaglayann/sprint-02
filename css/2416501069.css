@@ -1,0 +1,89 @@
+/* Engin Dağlayan — 2416501069 */
+:root {
+  --no: 2416501069;
+  /* 2416501069 % 360 = 349 (Tarayıcı uyumluluğu için mod fonksiyonu yerine doğrudan hesaplandı) */
+  --ton: 349; 
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: "Lucida Console", monospace;
+  --bosluk-m: 1rem;
+  --kose: 8px;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--renk-zemin);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--renk-ana);
+  color: white;
+  padding: var(--bosluk-m);
+}
+
+nav a {
+  color: white;
+  margin-right: var(--bosluk-m);
+  text-decoration: none;
+}
+
+main {
+  padding: var(--bosluk-m);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Tablodan Karta Geçiş ve Grid Sistemi */
+section.etkinlik-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobil: Tek sütun, taşma yok */
+  gap: var(--bosluk-m);
+}
+
+@media (min-width: 768px) {
+  section.etkinlik-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Geniş ekran: Çoklu sütun */
+  }
+}
+
+article.kart {
+  background: white;
+  padding: var(--bosluk-m);
+  border-radius: var(--kose);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+article.kart a {
+  margin-top: auto;
+  color: var(--renk-ana);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Form Tasarımı ve Hata Durumu */
+form { display: flex; flex-direction: column; max-width: 400px; }
+label { margin-top: var(--bosluk-m); font-weight: bold; display: block; }
+input, select, textarea { 
+  padding: 0.5rem; 
+  margin-top: 0.5rem; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-family: inherit;
+}
+input:invalid { border-color: red; } /* Boş form gönderince hata belli olur */
+.hata-mesaj { color: red; font-size: 0.8rem; display: none; }
+input:invalid + .hata-mesaj { display: block; }
+button { 
+  margin-top: 1.5rem; 
+  padding: 0.75rem; 
+  background-color: var(--renk-ana); 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="css/2416501069.css">
+</head>
+<body>
+    <header>
+        <h1>Etkinlik Ekle</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="etkinlik-ekle.html">Ekle</a>
+            <a href="etkinlik-guncelle.html">Güncelle</a>
+        </nav>
+    </header>
+    <main>
+        <form id="ekleForm">
+            <label for="ad">Etkinlik adı</label>
+            <input type="text" id="ad" required>
+            <span class="hata-mesaj">Bu alan zorunludur.</span>
+
+            <label for="kategori">Kategori</label>
+            <select id="kategori" required>
+                <option value="">Seçiniz ▾</option>
+                <option value="Seminer">Seminer</option>
+                <option value="Atölye">Atölye</option>
+                <option value="Söyleşi">Söyleşi</option>
+            </select>
+
+            <label for="tarih">Tarih</label>
+            <input type="date" id="tarih" required>
+            <span class="hata-mesaj">Lütfen tarih seçin.</span>
+
+            <label for="aciklama">Açıklama</label>
+            <textarea id="aciklama" rows="3"></textarea>
+
+            <button type="submit">Kaydet</button>
+        </form>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>
